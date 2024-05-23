@@ -1,4 +1,4 @@
-ï»¿#include <iostream>
+#include <iostream>
 #include <string>
 #include "Convector_Morze_To_Text.h"
 #include <fcntl.h>
@@ -7,21 +7,21 @@
 using namespace std;
 
 void ClearConsole() {
-	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¾Ñ‡Ð¸ÑÑ‚ÐºÐ¸ ÑÐºÑ€Ð°Ð½Ð°..." << std::endl;
-	// ÐžÐ¶Ð¸Ð´Ð°ÐµÐ¼ Ð½Ð°Ð¶Ð°Ñ‚Ð¸Ñ ÐºÐ»Ð°Ð²Ð¸ÑˆÐ¸
+	std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ î÷èñòêè ýêðàíà..." << std::endl;
+	// Îæèäàåì íàæàòèÿ êëàâèøè
 	getchar();
 
-	// ÐžÑ‡Ð¸Ñ‰Ð°ÐµÐ¼ ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ
+	// Î÷èùàåì êîíñîëü
 	system("cls");
 }
 
 void main() {
 	setlocale(LC_ALL, "Russian");
-
+	system("chcp 1251");
 	string str;
 	int opredelitel_type_conversion, opredelitel_language_conversion;
 	
-	//string str = {"Ð ÐŸ Ð’" };
+	//string str = {"À Ï Â" };
 	/*getline(cin,str);
 	Convector_Morze convector = Convector_Morze(str, 1, 2);
 	convector.Conversion();
