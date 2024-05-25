@@ -41,6 +41,7 @@ private:
     void String_Treatment();
 
     void Search_in_Dictionary(string word);
+
 public:
 
     Convector_Morze() {
@@ -88,4 +89,10 @@ public:
         return _upd_sring;
     }
 
+    ~Convector_Morze() {
+        _translation_string = nullptr;
+        _upd_sring = nullptr;
+        _language = Rus;
+        _type_of_conversion = Morze_To_Text;
+    }
 };

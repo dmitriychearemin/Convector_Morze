@@ -7,7 +7,7 @@
 using namespace std;
 
 void ClearConsole() {
-	std::cout << "Нажмите клавишу Enter для очистки экрана..." << std::endl;
+	std::cout << "Please? press Enter for clear screen..." << std::endl;
 	// Ожидаем нажатия клавиши
 	getchar();
 
