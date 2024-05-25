@@ -40,7 +40,7 @@ void main() {
 
 		cin.clear();
 		cin.ignore();
-		cout << "Input string sharing space letters, exercize: --. ----; D G T Y E" << endl;
+		cout << "Input string sharing space letters, exercize: --. ----; ÏÐÈÂÅÒ ÌÈÐ; HELLO WORLD" << endl;
 		getline(cin,str);
 
 		Convector_Morze convector = Convector_Morze(str, opredelitel_language_conversion, opredelitel_type_conversion);
