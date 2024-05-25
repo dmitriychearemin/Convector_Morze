@@ -11,7 +11,7 @@ void Convector_Morze::String_Treatment() {
 	int i = 0;
 	string letter;
 
-	while (_translation_string[i]) {
+	while (_translation_string[i] && _type_of_conversion == Morze_To_Text) {
 		letter.clear();
 		while (_translation_string[i] != ' ' && _translation_string[i] != '\0')
 		{
@@ -22,7 +22,20 @@ void Convector_Morze::String_Treatment() {
 		if (_translation_string[i] == ' ') {	
 			i++;
 		}
+	}
+
+	while (_translation_string[i] && _type_of_conversion == Text_To_Morze) {
+		letter.clear();
+		while (_translation_string[i] != ' ' && _translation_string[i] != '\0')
+		{
+			letter = _translation_string[i];
+			Search_in_Dictionary(letter);
+			i++;
+		}
 		
+		if (_translation_string[i] == ' ') {
+			i++;
+		}
 	}
 
 }
