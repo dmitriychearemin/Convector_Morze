@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 #include "Convector_Morze_To_Text.h"
@@ -8,25 +9,30 @@ using namespace std;
 
 void ClearConsole() {
 	std::cout << "Please? press Enter for clear screen..." << std::endl;
+
 	// Ожидаем нажатия клавиши
 	getchar();
 
 	// Очищаем консоль
 	system("cls");
+
 }
 
 void main() {
+
 	setlocale(LC_ALL, "Russian");
 	system("chcp 1251");
 	string str;
 	int opredelitel_type_conversion, opredelitel_language_conversion;
 	
+
 	//string str = {"А П В" };
 	/*getline(cin,str);
 	Convector_Morze convector = Convector_Morze(str, 1, 2);
 	convector.Conversion();
 	cout << "Your String: " << str << endl;
 	cout << "New converted String: " << convector.Get_Translate_string() << endl;*/
+
 
 	while (true)
 	{
@@ -46,10 +52,11 @@ void main() {
 		Convector_Morze convector = Convector_Morze(str, opredelitel_language_conversion, opredelitel_type_conversion);
 		convector.Conversion();
 		cout << "Your String: " << str << endl;
-
 		cout << "New converted String: "<< convector.Get_Translate_string() << endl;
 
 		ClearConsole();
+	
+		str.clear();
 	}
 
 

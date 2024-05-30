@@ -90,9 +90,10 @@ public:
     }
 
     ~Convector_Morze() {
-        _translation_string = nullptr;
-        _upd_sring = nullptr;
+        _translation_string.clear();
+        _upd_sring.clear();
         _language = Rus;
         _type_of_conversion = Morze_To_Text;
     }
+
 };
